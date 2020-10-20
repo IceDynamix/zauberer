@@ -42,7 +42,7 @@ async def magischeMiesmuschel(message: discord.message, params: str):
         "das geht dich nichts an",
         "wen interessierts überhaupt",
         "sag nochmal ich hab dich nicht gehört",
-        "die leitung ist schlecht warte kurz"
+        "die leitung ist schlecht warte kurz",
         "new phone who dis",
         "du hurensohn",
         "laber keinen scheiß",
