@@ -112,8 +112,11 @@ async def dog(message: discord.message, params: str):
 
 
 async def cat(message: discord.message, params: str):
-    url = "https://api.thecatapi.com/v1/images/search"
-    image = json.loads(requests.get(url).text)[0]["url"]
+    if random.random() > 0.9:
+        image = "https://cdn.nekos.life/neko/neko{0:03}.jpg".format(random.randint(0,100))
+    else:
+        url = "https://api.thecatapi.com/v1/images/search"
+        image = json.loads(requests.get(url).text)[0]["url"]
     await send(message.channel, image)
 
 
@@ -156,7 +159,7 @@ COMMANDS = {
     },
     "ein katzenbild": {
         "function": cat,
-        "help": "für ein zufälliges katzenbild"
+        "help": "für ein zufälliges katzenbild (mit einer chance auf eine neko)"
     },
     "hilfe": {
         "function": helpCommand,
